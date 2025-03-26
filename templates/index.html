@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Predict Potential Customer</h1>
+    <p>Please enter the customer's details to predict if they are likely to subscribe.</p>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        <label for="income">Income:</label>
+        <input type="text" id="income" name="income" required><br><br>
+        <label for="app_opens">Number of App Opens:</label>
+        <input type="text" id="app_opens" name="app_opens" required><br><br>
+        <label for="time_spent">Time Spent on App (minutes):</label>
+        <input type="text" id="time_spent" name="time_spent" required><br><br>
+        <label for="features_used">Number of Features Used:</label>
+        <input type="text" id="features_used" name="features_used" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
